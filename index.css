@@ -1,0 +1,254 @@
+:root {
+	/* Colors */
+	--clr-purple: hsl(259, 100%, 65%);
+	--clr-lightRed: hsl(0, 100%, 67%);
+
+	--clr-white: hsl(0, 0%, 100%);
+	--clr-offWhite: hsl(0, 0%, 94%);
+	--clr-lightGrey: hsl(0, 0%, 86%);
+	--clr-smokeGrey: hsl(0, 1%, 44%);
+	--clr-offBlack: hsl(0, 0%, 8%);
+
+	/* Font */
+	--fs-inputs: 32px;
+
+	--fw-400: 400;
+	--fw-700: 700;
+	--fw-800: 800;
+
+	--ff-font-family: "Poppins", sans-serif;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+html {
+	font-family: var(--ff-font-family);
+	font-weight: var(--fw-700);
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+	justify-content: center;
+	align-items: center;
+	background-color: var(--clr-offWhite);
+	margin: 0;
+	padding: 0;
+}
+
+.card {
+	background-color: var(--clr-white);
+	width: 700px;
+	height: auto;
+	box-shadow: 0.1rem 0.1rem 1rem rgb(0 0 0 / 0.2);
+	border-radius: 1rem 1rem 7rem 1rem;
+}
+
+@media screen and (max-width: 375px) {
+	.card {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		max-width: 375px;
+		height: auto;
+		margin-block: 1rem;
+		margin-left: 2rem;
+	}
+}
+
+.card-body {
+	width: 100%;
+	margin-block: 2rem;
+}
+
+#form {
+	display: flex;
+	gap: 10px;
+	font-size: 13px;
+	margin-inline: 1rem;
+	padding: 0;
+}
+
+@media screen and (max-width: 375px) {
+	#form {
+		display: flex;
+		width: 100%;
+		/* border: 1px solid blue; */
+		margin: 0;
+	}
+}
+
+.day-input,
+.month-input,
+.year-input {
+	width: 135px;
+	height: auto;
+	color: var(--clr-smokeGrey);
+	border: none;
+	text-transform: uppercase;
+	letter-spacing: 3px;
+	line-height: 2rem;
+	margin-inline: 1rem;
+}
+
+@media screen and (max-width: 375px) {
+	.day-input,
+	.month-input,
+	.year-input {
+		width: 100%;
+		height: auto;
+		/* border: 1px solid blue; */
+		font-size: 10px;
+		margin: 0 0 1rem 1rem;
+	}
+}
+
+.day,
+.month,
+.year {
+	width: 100%;
+	height: 4rem;
+	font-family: var(--ff-font-family);
+	font-size: 32px;
+	font-weight: var(--fw-700);
+	border: 1px solid var(--clr-smokeGrey);
+	border-radius: 7px;
+	padding: 1rem;
+}
+
+@media screen and (max-width: 375px) {
+	.day,
+	.month,
+	.year {
+		width: 6rem;
+		height: 7vh;
+		padding: 0.5rem;
+		font-size: 1rem;
+	}
+}
+
+.day:focus {
+	border: 1px solid var(--clr-purple);
+	outline: none;
+}
+
+.month:focus {
+	border: 1px solid var(--clr-purple);
+	outline: none;
+}
+.year:focus {
+	border: 1px solid var(--clr-purple);
+	outline: none;
+}
+
+hr {
+	display: inline-flex;
+	width: 80%;
+	margin-left: 2rem;
+	color: var(--clr-lightGrey);
+	margin-bottom: 1rem;
+}
+
+@media screen and (max-width: 375px) {
+	hr {
+		width: 90%;
+		margin-top: 1rem;
+		margin-bottom: 2.5rem;
+		margin-inline: 1rem;
+	}
+}
+
+svg {
+	position: relative;
+	top: 3rem;
+	width: 4.3rem;
+	height: auto;
+	background-color: var(--clr-purple);
+	border-radius: 50px;
+	padding: 1.1rem;
+	margin-left: 1rem;
+	margin-top: 3rem;
+}
+
+@media screen and (max-width: 375px) {
+	svg {
+		right: 15rem;
+		top: 3.6rem;
+	}
+}
+
+svg:hover {
+	background-color: var(--clr-offBlack);
+	cursor: pointer;
+}
+
+.results {
+	margin-top: -2rem;
+	margin-inline: 2rem;
+}
+
+.results p {
+	margin-top: 4rem;
+	font-size: 95px;
+	font-style: italic;
+	line-height: 1px;
+}
+
+@media screen and (max-width: 375px) {
+	.results p {
+		font-size: 3rem;
+		margin-inline: -1rem;
+	}
+}
+
+span {
+	color: var(--clr-purple);
+}
+
+.day-error {
+	display: flex;
+	color: var(--clr-lightRed);
+	text-align: center;
+	font-size: 0.7rem;
+	line-height: 1rem;
+	margin-bottom: -1rem;
+	margin-top: 0.5rem;
+	font-weight: var(--fw-400);
+	text-transform: none;
+	letter-spacing: normal;
+	font-style: italic;
+}
+
+.month-error {
+	display: flex;
+	color: var(--clr-lightRed);
+	text-align: center;
+	font-size: 0.7rem;
+	line-height: 1rem;
+	margin-bottom: -1rem;
+	margin-top: 0.5rem;
+	font-weight: var(--fw-400);
+	text-transform: none;
+	letter-spacing: normal;
+	font-style: italic;
+}
+
+.year-error {
+	display: flex;
+	color: var(--clr-lightRed);
+	text-align: center;
+	font-size: 0.7rem;
+	line-height: 1rem;
+	margin-bottom: -1rem;
+	margin-top: 0.5rem;
+	font-weight: var(--fw-400);
+	text-transform: none;
+	letter-spacing: normal;
+	font-style: italic;
+}
